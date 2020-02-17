@@ -1,4 +1,4 @@
-.PHONY: clean-pyc clean-build docs clean
+.PHONY: clean-pyc clean-build docs clean upgrade
 
 help:
 	@echo "clean-build - remove build artifacts"
@@ -10,6 +10,7 @@ help:
 	@echo "docs - generate Sphinx HTML documentation, including API docs"
 	@echo "release - package and upload a release"
 	@echo "dist - package"
+	@echo "upgrade update the pip requirements files to use the latest releases satisfying our constraints"
 
 clean: clean-build clean-pyc
 	rm -fr htmlcov/
@@ -55,3 +56,13 @@ dist: clean
 	python setup.py sdist
 	python setup.py bdist_wheel
 	ls -l dist
+
+upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
+upgrade:
+	pip install -qr requirements/pip-tools.txt
+	pip-compile --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
+	pip-compile --upgrade -o requirements/base.txt requirements/base.in
+	pip-compile --upgrade -o requirements/test.txt requirements/test.in
+	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
+	# Let tox control the Django version for tests
+	sed '/^[dD]jango==/d' requirements/test.txt > requirements/tox.txt

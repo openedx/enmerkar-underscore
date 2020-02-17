@@ -15,11 +15,6 @@ env:
   - TOX_ENV=django111
 
 matrix:
-  include:
-    - python: 2.7
-      env: TOX_ENV=django111
-    - python: pypy
-      env: TOX_ENV=django111
   exclude:
     - python: 3.5
       env: TOX_ENV=django3
