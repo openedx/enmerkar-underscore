@@ -6,7 +6,7 @@ import codecs
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
-version = '0.5.2'
+version = '0.6.0'
 
 
 def read(*parts):
@@ -35,9 +35,9 @@ test_requires = [
 
 
 install_requires = [
-    'django>=1.8,<2.0',
+    'django>=1.11',
     'babel>=1.3',
-    'django-babel>=0.5.1',
+    'enmerkar==0.7.0',
     'markey>=0.8,<0.9',
 ]
 
@@ -77,11 +77,18 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
+        'Programming Language :: Python',
         "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Framework :: Django',
+        'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
     ],
 )

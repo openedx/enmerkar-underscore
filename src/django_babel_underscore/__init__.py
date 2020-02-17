@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 import django
 
-if django.VERSION[:2] >= (1, 8):
-    from django.template.base import Lexer, TOKEN_TEXT
-else:
-    from django.template import Lexer, TOKEN_TEXT
+import django
+
+from django.template.base import Lexer
+
+if django.VERSION[:2] >= (2, 1):
+    from django.template.base import TokenType
+    TOKEN_TEXT = TokenType.TEXT
+else:  # django < 2.1
+    from django.template.base import TOKEN_TEXT
 
 from django.utils.encoding import force_text
-from django_babel.extract import extract_django
+from enmerkar.extract import extract_django
 from markey import underscore
 from markey.tools import TokenStream
 from markey.machine import tokenize, parse_arguments

@@ -3,6 +3,14 @@
 History
 -------
 
+0.6.0 (2020-01-07)
+------------------
+
+* Adds support for Python 3.6, 3.7
+* Adds support for Django 2.0, 2.1, 2.2 and 3.0.
+* Drop support for Django < 1.11
+
+
 0.5.2 (2018-08-18)
 ------------------
 
