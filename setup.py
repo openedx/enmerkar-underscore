@@ -24,27 +24,37 @@ if sys.argv[-1] == 'publish':
     sys.exit()
 
 
-test_requires = [
-    'coverage',
-    'pytest',
-    'pytest-cov>=1.4',
-    'pytest-flakes',
-    'pytest-pep8',
-    'python-coveralls',
-]
+def load_requirements(*requirements_paths):
+    """
+    Load all requirements from the specified requirements files.
+
+    Returns:
+        list: Requirements file relative path strings
+    """
+    requirements = set()
+    for path in requirements_paths:
+        requirements.update(
+            line.split('#')[0].strip() for line in open(path).readlines()
+            if is_requirement(line.strip())
+        )
+    return list(requirements)
 
 
-install_requires = [
-    'django>=1.11',
-    'babel>=1.3',
-    'enmerkar==0.7.0',
-    'markey>=0.8,<0.9',
-]
+def is_requirement(line):
+    """
+    Return True if the requirement line is a package requirement.
 
-
-dev_requires = [
-    'flake8>=2.0',
-]
+    Returns:
+        bool: True if the line is not blank, a comment, a URL, or an included file
+    """
+    return not (
+        line == '' or
+        line.startswith('-r') or
+        line.startswith('#') or
+        line.startswith('-e') or
+        line.startswith('git+') or
+        line.startswith('-c')
+    )
 
 
 setup(
@@ -58,13 +68,8 @@ setup(
     packages=find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
-    tests_require=test_requires,
-    install_requires=install_requires,
-    extras_require={
-        'docs': ['sphinx'],
-        'tests': test_requires,
-        'dev': dev_requires,
-    },
+    tests_require=load_requirements('requirements/test.in'),
+    install_requires=load_requirements('requirements/base.in'),
     entry_points="""
     [babel.extractors]
     underscore = django_babel_underscore:extract
@@ -78,8 +83,6 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         'Programming Language :: Python',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
@@ -87,8 +90,5 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
-        'Framework :: Django :: 2.1',
-        'Framework :: Django :: 2.2',
-        'Framework :: Django :: 3.0',
     ],
 )

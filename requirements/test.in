@@ -1,0 +1,12 @@
+# Test requirements for using this application
+
+-r base.in                     # Core dependencies
+
+coverage
+flake8>=2.0
+pytest
+pytest-cov>=1.4
+pytest-flakes
+pytest-pep8
+python-coveralls
+sphinx

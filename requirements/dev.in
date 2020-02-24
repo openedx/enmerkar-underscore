@@ -1,0 +1,2 @@
+-r base.in                      # Core dependencies
+-r test.in                      # Test dependencies
