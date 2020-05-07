@@ -3,24 +3,20 @@ sudo: false
 language: python
 
 python:
-  - 3.7
-  - 3.6
   - 3.5
+  - 3.8
 
 env:
-  - TOX_ENV=django3
+  - TOX_ENV=django30
   - TOX_ENV=django22
-  - TOX_ENV=django21
-  - TOX_ENV=django20
-  - TOX_ENV=django111
 
 matrix:
   exclude:
     - python: 3.5
-      env: TOX_ENV=django3
+      env: TOX_ENV=django30
 
 before_install:
-  - "pip install -U pip"
+  - pip install pip==20.0.2
 
 install:
   - pip install tox
