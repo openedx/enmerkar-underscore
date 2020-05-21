@@ -2,6 +2,7 @@
 
 -r github.in              # Github requirements
 
-django
+django<2.3
 babel>=1.3
 markey>=0.8,<0.9
+enmerkar
