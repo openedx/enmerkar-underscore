@@ -7,45 +7,44 @@
 alabaster==0.7.12         # via sphinx
 apipkg==1.5               # via execnet
 attrs==19.3.0             # via pytest
-babel==2.8.0
+babel==2.8.0              # via -r requirements/base.in, enmerkar, sphinx
 certifi==2020.4.5.1       # via requests
 chardet==3.0.4            # via requests
-coverage==5.1
-git+https://github.com/Zegocover/enmerkar.git@dbc113798aa4beabdfa2d00e6fef48248eb0f185#egg=django-babel==0.6.3.dev0
-django==2.2.12
+coverage==5.1             # via -r requirements/test.in, pytest-cov, python-coveralls
+django==2.2.12            # via -r requirements/base.in, enmerkar
 docutils==0.16            # via sphinx
-entrypoints==0.3          # via flake8
+enmerkar==0.7.1           # via -r requirements/base.in
 execnet==1.7.1            # via pytest-cache
-flake8==3.7.9
+flake8==3.8.1             # via -r requirements/test.in
 idna==2.9                 # via requests
 imagesize==1.2.0          # via sphinx
-importlib-metadata==1.6.0  # via pluggy, pytest
+importlib-metadata==1.6.0  # via flake8, pluggy, pytest
 jinja2==2.11.2            # via sphinx
-markey==0.8
+markey==0.8               # via -r requirements/base.in
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
-more-itertools==8.2.0     # via pytest
-packaging==20.3           # via pytest, sphinx
+more-itertools==8.3.0     # via pytest
+packaging==20.4           # via pytest, sphinx
 pathlib2==2.3.5           # via pytest
 pep8==1.7.1               # via pytest-pep8
 pluggy==0.13.1            # via pytest
 py==1.8.1                 # via pytest
-pycodestyle==2.5.0        # via flake8
-pyflakes==2.1.1           # via flake8, pytest-flakes
+pycodestyle==2.6.0        # via flake8
+pyflakes==2.2.0           # via flake8, pytest-flakes
 pygments==2.6.1           # via sphinx
 pyparsing==2.4.7          # via packaging
 pytest-cache==1.0         # via pytest-pep8
-pytest-cov==2.8.1
-pytest-flakes==4.0.0
-pytest-pep8==1.0.6
-pytest==5.4.1
-python-coveralls==2.9.3
+pytest-cov==2.8.1         # via -r requirements/test.in
+pytest-flakes==4.0.0      # via -r requirements/test.in
+pytest-pep8==1.0.6        # via -r requirements/test.in
+pytest==5.4.2             # via -r requirements/test.in, pytest-cache, pytest-cov, pytest-flakes, pytest-pep8
+python-coveralls==2.9.3   # via -r requirements/test.in
 pytz==2020.1              # via babel, django
 pyyaml==5.3.1             # via python-coveralls
 requests==2.23.0          # via python-coveralls, sphinx
-six==1.14.0               # via packaging, pathlib2, python-coveralls
+six==1.15.0               # via packaging, pathlib2, python-coveralls
 snowballstemmer==2.0.0    # via sphinx
-sphinx==3.0.3
+sphinx==3.0.3             # via -r requirements/test.in
 sphinxcontrib-applehelp==1.0.2  # via sphinx
 sphinxcontrib-devhelp==1.0.2  # via sphinx
 sphinxcontrib-htmlhelp==1.0.3  # via sphinx
