@@ -1,2 +1,0 @@
-# As latest version of enmerkar does not support old versions of django<2.2
-git+https://github.com/Zegocover/enmerkar.git@dbc113798aa4beabdfa2d00e6fef48248eb0f185#egg=django-babel==0.6.3.dev0
