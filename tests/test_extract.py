@@ -3,7 +3,7 @@ import pytest
 from babel._compat import BytesIO
 from babel.messages.extract import DEFAULT_KEYWORDS
 
-from django_babel_underscore import extract
+from enmerkar_underscore import extract
 
 
 class TestMixedExtract:
