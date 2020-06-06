@@ -6,7 +6,7 @@ import codecs
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
-version = '0.6.1'
+version = '1.0.0'
 
 
 def read(*parts):
@@ -58,13 +58,13 @@ def is_requirement(line):
 
 
 setup(
-    name='django-babel-underscore',
+    name='enmerkar-underscore',
     version=version,
     description='Implements a underscore extractor for django-babel.',
     long_description=read('README.rst') + u'\n\n' + read('HISTORY.rst'),
-    author='Christopher Grebs',
-    author_email='cg@webshox.org',
-    url='https://github.com/EnTeQuAk/django-babel-underscore',
+    author='edX',
+    author_email='oscm@edx.org',
+    url='https://github.com/edx/enmerkar-underscore',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
@@ -72,13 +72,13 @@ setup(
     install_requires=load_requirements('requirements/base.in'),
     entry_points="""
     [babel.extractors]
-    underscore = django_babel_underscore:extract
+    underscore = enmerkar_underscore:extract
     """,
     zip_safe=False,
     license='BSD',
-    keywords='django-babel-underscore',
+    keywords='enmerkar-underscore',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',

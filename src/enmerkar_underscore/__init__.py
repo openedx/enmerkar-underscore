@@ -12,7 +12,7 @@ else:  # django < 2.1
     from django.template.base import TOKEN_TEXT
 
 from django.utils.encoding import force_text
-from django_babel.extract import extract_django
+from enmerkar.extract import extract_django
 from markey import underscore
 from markey.tools import TokenStream
 from markey.machine import tokenize, parse_arguments

@@ -3,6 +3,13 @@
 History
 -------
 
+1.0.0 (2020-05-29)
+------------------
+
+* Rename the repo
+* Using latest version of enmerkar.
+* Release of pypi
+
 0.6.0 (2020-01-07)
 ------------------
 

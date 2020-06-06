@@ -23,3 +23,14 @@ install:
 
 script:
   - tox -e $TOX_ENV
+
+deploy:
+  provider: pypi
+  user: edx
+  password:
+    secure:
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    python: 3.5
+    condition: $TOXENV = django22

@@ -5,3 +5,4 @@
 django
 babel>=1.3
 markey>=0.8,<0.9
+enmerkar==0.7.1
