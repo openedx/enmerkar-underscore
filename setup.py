@@ -19,7 +19,7 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
     os.system('python setup.py bdist_wheel upload')
     print('You probably want to also tag the version now:')
-    print('  git tag -a %s -m "version %s"' % (version, version))
+    print(('  git tag -a %s -m "version %s"' % (version, version)))
     print('  git push --tags')
     sys.exit()
 
@@ -61,7 +61,7 @@ setup(
     name='enmerkar-underscore',
     version=version,
     description='Implements a underscore extractor for django-babel.',
-    long_description=read('README.rst') + u'\n\n' + read('HISTORY.rst'),
+    long_description=read('README.rst') + '\n\n' + read('HISTORY.rst'),
     author='edX',
     author_email='oscm@edx.org',
     url='https://github.com/edx/enmerkar-underscore',
