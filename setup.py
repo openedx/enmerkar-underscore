@@ -61,7 +61,7 @@ setup(
     name='enmerkar-underscore',
     version=version,
     description='Implements a underscore extractor for django-babel.',
-    long_description=read('README.rst') + u'\n\n' + read('HISTORY.rst'),
+    long_description=read('README.rst') + '\n\n' + read('HISTORY.rst'),
     author='edX',
     author_email='oscm@edx.org',
     url='https://github.com/edx/enmerkar-underscore',
