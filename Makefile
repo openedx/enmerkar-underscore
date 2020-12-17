@@ -60,6 +60,7 @@ dist: clean
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade:
 	pip install -qr requirements/pip-tools.txt
+	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
 	pip-compile --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
 	pip-compile --upgrade -o requirements/base.txt requirements/base.in
 	pip-compile --upgrade -o requirements/test.txt requirements/test.in
