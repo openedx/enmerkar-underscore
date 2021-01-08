@@ -6,7 +6,7 @@ import codecs
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
-version = '1.0.0'
+version = '1.0.1'
 
 
 def read(*parts):
