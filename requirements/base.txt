@@ -4,9 +4,10 @@
 #
 #    make upgrade
 #
+asgiref==3.3.1            # via django
 babel==2.9.0              # via -r requirements/base.in, enmerkar
-django==2.2.17            # via -r requirements/base.in, enmerkar
+django==3.1.5             # via -r requirements/base.in, enmerkar
 enmerkar==0.7.1           # via -r requirements/base.in
 markey==0.8               # via -r requirements/base.in
-pytz==2020.4              # via babel, django
+pytz==2020.5              # via babel, django
 sqlparse==0.4.1           # via django
