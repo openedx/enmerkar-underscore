@@ -17,9 +17,6 @@ jobs:
         os: [ubuntu-20.04]
         python-version: ['3.8']
         toxenv: [django30, django22]
-        exclude:
-        - python-version: 3.5
-          toxenv: django30
 
     steps:
     - uses: actions/checkout@v1
