@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-import django
-
 import django
 
 from django.template.base import Lexer

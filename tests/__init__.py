@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import pytest
 from babel._compat import BytesIO
 
@@ -31,7 +30,7 @@ class TestMixedExtract:
         assert messages == [(1, 'gettext', 'name', [])]
 
     def test_extract_unicode(self):
-        buf = BytesIO('<%= gettext("@ſðæ314“ſſ¶ÐĐÞ→SÆ^ĸŁ") %>'.encode('utf-8'))
+        buf = BytesIO('<%= gettext("@ſðæ314“ſſ¶ÐĐÞ→SÆ^ĸŁ") %>'.encode())
         messages = list(extract(buf, self.keywords, [], {}))
         assert messages == [(1, 'gettext', '@ſðæ314“ſſ¶ÐĐÞ→SÆ^ĸŁ', [])]
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #
 # complexity documentation build configuration file, created by
 # sphinx-quickstart on Tue Jul  9 22:26:36 2013.
@@ -55,8 +54,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Django Babel Underscore Extractor'
-copyright = u'2014, Christopher Grebs'
+project = 'Django Babel Underscore Extractor'
+copyright = '2014, Christopher Grebs'
 
 # The version info for the project you're documenting, acts as replacement
 # for |version| and |release|, also used in various other places throughout
@@ -209,8 +208,8 @@ latex_elements = {
 # [howto/manual]).
 latex_documents = [
     ('index', 'django-babel-underscore.tex',
-     u'Django Babel Underscore Extractor Documentation',
-     u'Christopher Grebs', 'manual'),
+     'Django Babel Underscore Extractor Documentation',
+     'Christopher Grebs', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at
@@ -240,8 +239,8 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'django-babel-underscore',
-     u'Django Babel Underscore Extractor Documentation',
-     [u'Christopher Grebs'], 1)
+     'Django Babel Underscore Extractor Documentation',
+     ['Christopher Grebs'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -255,8 +254,8 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     ('index', 'django-babel-underscore',
-     u'Django Babel Underscore Extractor Documentation',
-     u'Christopher Grebs',
+     'Django Babel Underscore Extractor Documentation',
+     'Christopher Grebs',
      'django-babel-underscore',
      'One line description of project.',
      'Miscellaneous'),
