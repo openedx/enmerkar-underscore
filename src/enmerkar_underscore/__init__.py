@@ -1,7 +1,5 @@
 import django
 
-import django
-
 from django.template.base import Lexer
 
 if django.VERSION[:2] >= (2, 1):

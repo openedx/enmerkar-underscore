@@ -4,54 +4,123 @@
 #
 #    make upgrade
 #
-alabaster==0.7.12         # via sphinx
-apipkg==1.5               # via execnet
-asgiref==3.3.1            # via django
-attrs==20.3.0             # via pytest
-babel==2.9.0              # via -r requirements/base.in, enmerkar, sphinx
-certifi==2020.12.5        # via requests
-chardet==4.0.0            # via requests
-coverage==5.3.1           # via -r requirements/test.in, pytest-cov, python-coveralls
-docutils==0.16            # via sphinx
-enmerkar==0.7.1           # via -r requirements/base.in
-execnet==1.7.1            # via pytest-cache
-flake8==3.8.4             # via -r requirements/test.in
-idna==2.10                # via requests
-imagesize==1.2.0          # via sphinx
-iniconfig==1.1.1          # via pytest
-jinja2==2.11.2            # via sphinx
-markey==0.8               # via -r requirements/base.in
-markupsafe==1.1.1         # via jinja2
-mccabe==0.6.1             # via flake8
-packaging==20.8           # via pytest, sphinx
-pep8==1.7.1               # via pytest-pep8
-pluggy==0.13.1            # via pytest
-py==1.10.0                # via pytest
-pycodestyle==2.6.0        # via flake8
-pyflakes==2.2.0           # via flake8, pytest-flakes
-pygments==2.7.3           # via sphinx
-pyparsing==2.4.7          # via packaging
-pytest-cache==1.0         # via pytest-pep8
-pytest-cov==2.10.1        # via -r requirements/test.in
-pytest-flakes==4.0.3      # via -r requirements/test.in
-pytest-pep8==1.0.6        # via -r requirements/test.in
-pytest==6.2.1             # via -r requirements/test.in, pytest-cache, pytest-cov, pytest-flakes, pytest-pep8
-python-coveralls==2.9.3   # via -r requirements/test.in
-pytz==2020.5              # via babel, django
-pyyaml==5.3.1             # via python-coveralls
-requests==2.25.1          # via python-coveralls, sphinx
-six==1.15.0               # via python-coveralls
-snowballstemmer==2.0.0    # via sphinx
-sphinx==3.4.3             # via -r requirements/test.in
-sphinxcontrib-applehelp==1.0.2  # via sphinx
-sphinxcontrib-devhelp==1.0.2  # via sphinx
-sphinxcontrib-htmlhelp==1.0.3  # via sphinx
-sphinxcontrib-jsmath==1.0.1  # via sphinx
-sphinxcontrib-qthelp==1.0.3  # via sphinx
-sphinxcontrib-serializinghtml==1.1.4  # via sphinx
-sqlparse==0.4.1           # via django
-toml==0.10.2              # via pytest
-urllib3==1.26.2           # via requests
+alabaster==0.7.12
+    # via sphinx
+apipkg==1.5
+    # via execnet
+attrs==20.3.0
+    # via pytest
+babel==2.9.0
+    # via
+    #   -r requirements/base.in
+    #   enmerkar
+    #   sphinx
+certifi==2020.12.5
+    # via requests
+chardet==4.0.0
+    # via requests
+coverage==5.3.1
+    # via
+    #   -r requirements/test.in
+    #   pytest-cov
+    #   python-coveralls
+    # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -r requirements/base.in
+    #   enmerkar
+docutils==0.16
+    # via sphinx
+enmerkar==0.7.1
+    # via -r requirements/base.in
+execnet==1.7.1
+    # via pytest-cache
+flake8==3.8.4
+    # via -r requirements/test.in
+idna==2.10
+    # via requests
+imagesize==1.2.0
+    # via sphinx
+iniconfig==1.1.1
+    # via pytest
+jinja2==2.11.2
+    # via sphinx
+markey==0.8
+    # via -r requirements/base.in
+markupsafe==1.1.1
+    # via jinja2
+mccabe==0.6.1
+    # via flake8
+packaging==20.8
+    # via
+    #   pytest
+    #   sphinx
+pep8==1.7.1
+    # via pytest-pep8
+pluggy==0.13.1
+    # via pytest
+py==1.10.0
+    # via pytest
+pycodestyle==2.6.0
+    # via flake8
+pyflakes==2.2.0
+    # via
+    #   flake8
+    #   pytest-flakes
+pygments==2.7.4
+    # via sphinx
+pyparsing==2.4.7
+    # via packaging
+pytest-cache==1.0
+    # via pytest-pep8
+pytest-cov==2.11.0
+    # via -r requirements/test.in
+pytest-flakes==4.0.3
+    # via -r requirements/test.in
+pytest-pep8==1.0.6
+    # via -r requirements/test.in
+pytest==6.2.1
+    # via
+    #   -r requirements/test.in
+    #   pytest-cache
+    #   pytest-cov
+    #   pytest-flakes
+    #   pytest-pep8
+python-coveralls==2.9.3
+    # via -r requirements/test.in
+pytz==2020.5
+    # via
+    #   babel
+    #   django
+pyyaml==5.4
+    # via python-coveralls
+requests==2.25.1
+    # via
+    #   python-coveralls
+    #   sphinx
+six==1.15.0
+    # via python-coveralls
+snowballstemmer==2.0.0
+    # via sphinx
+sphinx==3.4.3
+    # via -r requirements/test.in
+sphinxcontrib-applehelp==1.0.2
+    # via sphinx
+sphinxcontrib-devhelp==1.0.2
+    # via sphinx
+sphinxcontrib-htmlhelp==1.0.3
+    # via sphinx
+sphinxcontrib-jsmath==1.0.1
+    # via sphinx
+sphinxcontrib-qthelp==1.0.3
+    # via sphinx
+sphinxcontrib-serializinghtml==1.1.4
+    # via sphinx
+sqlparse==0.4.1
+    # via django
+toml==0.10.2
+    # via pytest
+urllib3==1.26.2
+    # via requests
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

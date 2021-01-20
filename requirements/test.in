@@ -1,5 +1,6 @@
 # Test requirements for using this application
 
+-c constraints.txt
 -r base.in                     # Core dependencies
 
 coverage
