@@ -5,8 +5,8 @@ Django Babel Underscore Extractor
 .. image:: https://badge.fury.io/py/django-babel-underscore.png
     :target: http://badge.fury.io/py/django-babel-underscore
 
-.. image:: https://travis-ci.org/EnTeQuAk/django-babel-underscore.png?branch=master
-        :target: https://travis-ci.org/EnTeQuAk/django-babel-underscore
+.. image:: https://github.com/edx/enmerkar-underscore/workflows/Python%20CI/badge.svg?branch=master
+        :target: https://github.com/edx/enmerkar-underscore/actions?query=workflow%3A%22Python+CI%22
 
 .. image:: https://pypip.in/d/django-babel-underscore/badge.png
         :target: https://pypi.python.org/pypi/django-babel-underscore
