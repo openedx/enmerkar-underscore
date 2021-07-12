@@ -5,7 +5,7 @@ import codecs
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
-version = '2.0.0'
+version = '2.1.0'
 
 
 def read(*parts):
@@ -86,5 +86,8 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Framework :: Django',
         'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
+        'Framework :: Django :: 3.1',        
+        'Framework :: Django :: 3.2',
     ],
 )
