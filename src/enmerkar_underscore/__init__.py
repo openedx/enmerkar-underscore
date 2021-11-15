@@ -15,6 +15,8 @@ from markey.tools import TokenStream
 from markey.machine import tokenize, parse_arguments
 
 
+__version__ = '2.1.0'
+
 def extract(fileobj, keywords, comment_tags, options):
     """Extracts translation messages from underscore template files.
 
