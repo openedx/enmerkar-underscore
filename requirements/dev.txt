@@ -102,7 +102,7 @@ six==1.16.0
     # via python-coveralls
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==4.3.1
+sphinx==4.3.2
     # via -r requirements/test.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
