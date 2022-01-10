@@ -17,7 +17,7 @@ babel==2.9.1
     #   sphinx
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.9
+charset-normalizer==2.0.10
     # via requests
 coverage[toml]==6.2
     # via
@@ -66,7 +66,7 @@ pyflakes==2.4.0
     # via
     #   flake8
     #   pytest-flakes
-pygments==2.11.0
+pygments==2.11.2
     # via sphinx
 pyparsing==3.0.6
     # via packaging
@@ -93,7 +93,7 @@ pytz==2021.3
     #   django
 pyyaml==6.0
     # via python-coveralls
-requests==2.26.0
+requests==2.27.1
     # via
     #   python-coveralls
     #   sphinx
