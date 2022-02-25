@@ -19,7 +19,7 @@ certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.12
     # via requests
-coverage[toml]==6.3.1
+coverage[toml]==6.3.2
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -48,7 +48,7 @@ jinja2==3.0.3
     # via sphinx
 markey==0.8
     # via -r requirements/base.in
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via jinja2
 mccabe==0.6.1
     # via flake8
