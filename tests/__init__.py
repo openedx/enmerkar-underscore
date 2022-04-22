@@ -1,5 +1,5 @@
 import pytest
-from babel._compat import BytesIO
+from io import BytesIO
 
 from enmerkar_underscore import extract
 

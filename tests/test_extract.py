@@ -1,5 +1,5 @@
 import pytest
-from babel._compat import BytesIO
+from io import BytesIO
 from babel.messages.extract import DEFAULT_KEYWORDS
 
 from enmerkar_underscore import extract
