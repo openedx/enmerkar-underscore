@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-asgiref==3.5.0
+asgiref==3.5.1
     # via django
 babel==2.10.1
     # via
