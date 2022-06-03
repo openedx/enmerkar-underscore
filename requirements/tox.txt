@@ -19,7 +19,7 @@ certifi==2022.5.18.1
     # via requests
 charset-normalizer==2.0.12
     # via requests
-coverage[toml]==6.4
+coverage[toml]==6.4.1
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -28,7 +28,7 @@ coverage[toml]==6.4
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
     #   enmerkar
-docutils==0.17.1
+docutils==0.18.1
     # via sphinx
 enmerkar==0.7.1
     # via -r requirements/base.in
@@ -103,7 +103,7 @@ six==1.16.0
     # via python-coveralls
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==4.5.0
+sphinx==5.0.1
     # via -r requirements/test.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
