@@ -96,7 +96,7 @@ pytz==2022.1
     #   django
 pyyaml==6.0
     # via python-coveralls
-requests==2.27.1
+requests==2.28.0
     # via
     #   python-coveralls
     #   sphinx
