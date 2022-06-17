@@ -10,12 +10,12 @@ asgiref==3.5.2
     # via django
 attrs==21.4.0
     # via pytest
-babel==2.10.1
+babel==2.10.3
     # via
     #   -r requirements/base.in
     #   enmerkar
     #   sphinx
-certifi==2022.5.18.1
+certifi==2022.6.15
     # via requests
 charset-normalizer==2.0.12
     # via requests
@@ -103,7 +103,7 @@ six==1.16.0
     # via python-coveralls
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.0.1
+sphinx==5.0.2
     # via -r requirements/test.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
