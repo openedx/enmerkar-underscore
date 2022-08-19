@@ -19,7 +19,7 @@ certifi==2022.6.15
     # via requests
 charset-normalizer==2.1.0
     # via requests
-coverage[toml]==6.4.3
+coverage[toml]==6.4.4
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -69,7 +69,7 @@ pyflakes==2.5.0
     # via
     #   flake8
     #   pytest-flakes
-pygments==2.12.0
+pygments==2.13.0
     # via sphinx
 pyparsing==3.0.9
     # via packaging
@@ -90,7 +90,7 @@ pytest-pep8==1.0.6
     # via -r requirements/test.in
 python-coveralls==2.9.3
     # via -r requirements/test.in
-pytz==2022.2
+pytz==2022.2.1
     # via
     #   babel
     #   django
