@@ -17,7 +17,7 @@ babel==2.10.3
     #   sphinx
 certifi==2022.6.15
     # via requests
-charset-normalizer==2.1.0
+charset-normalizer==2.1.1
     # via requests
 coverage[toml]==6.4.4
     # via
@@ -123,7 +123,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-urllib3==1.26.11
+urllib3==1.26.12
     # via requests
 zipp==3.8.1
     # via importlib-metadata
