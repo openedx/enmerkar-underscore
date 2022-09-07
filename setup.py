@@ -114,7 +114,7 @@ setup(
     long_description=read('README.rst') + '\n\n' + read('HISTORY.rst'),
     author='edX',
     author_email='oscm@edx.org',
-    url='https://github.com/edx/enmerkar-underscore',
+    url='https://github.com/openedx/enmerkar-underscore',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
