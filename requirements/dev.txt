@@ -24,7 +24,7 @@ coverage[toml]==6.5.0
     #   -r requirements/test.in
     #   pytest-cov
     #   python-coveralls
-django==3.2.15
+django==3.2.16
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -41,7 +41,7 @@ idna==3.4
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==4.12.0
+importlib-metadata==5.0.0
     # via sphinx
 iniconfig==1.1.1
     # via pytest
@@ -90,7 +90,7 @@ pytest-pep8==1.0.6
     # via -r requirements/test.in
 python-coveralls==2.9.3
     # via -r requirements/test.in
-pytz==2022.2.1
+pytz==2022.4
     # via
     #   babel
     #   django
@@ -104,7 +104,7 @@ six==1.16.0
     # via python-coveralls
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.2.2
+sphinx==5.2.3
     # via -r requirements/test.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
