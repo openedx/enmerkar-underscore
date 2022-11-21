@@ -33,7 +33,7 @@ docutils==0.19
     # via sphinx
 enmerkar==0.7.1
     # via -r requirements/base.in
-exceptiongroup==1.0.1
+exceptiongroup==1.0.4
     # via pytest
 execnet==1.9.0
     # via pytest-cache
