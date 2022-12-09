@@ -15,7 +15,7 @@ babel==2.11.0
     #   -r requirements/base.in
     #   enmerkar
     #   sphinx
-certifi==2022.9.24
+certifi==2022.12.7
     # via requests
 charset-normalizer==2.1.1
     # via requests
@@ -54,7 +54,7 @@ markupsafe==2.1.1
     # via jinja2
 mccabe==0.7.0
     # via flake8
-packaging==21.3
+packaging==22.0
     # via
     #   pytest
     #   sphinx
@@ -70,8 +70,6 @@ pyflakes==3.0.1
     #   pytest-flakes
 pygments==2.13.0
     # via sphinx
-pyparsing==3.0.9
-    # via packaging
 pytest==7.2.0
     # via
     #   -r requirements/test.in
