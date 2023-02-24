@@ -19,7 +19,7 @@ certifi==2022.12.7
     # via requests
 charset-normalizer==3.0.1
     # via requests
-coverage[toml]==7.1.0
+coverage[toml]==7.2.0
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -126,5 +126,5 @@ tomli==2.0.1
     #   pytest
 urllib3==1.26.14
     # via requests
-zipp==3.13.0
+zipp==3.14.0
     # via importlib-metadata
