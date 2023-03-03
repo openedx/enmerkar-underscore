@@ -6,7 +6,7 @@
 #
 asgiref==3.6.0
     # via django
-babel==2.11.0
+babel==2.12.1
     # via
     #   -r requirements/base.in
     #   enmerkar
