@@ -27,7 +27,7 @@ django==3.2.19
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
     #   enmerkar
-docutils==0.19
+docutils==0.20.1
     # via sphinx
 enmerkar==0.7.1
     # via -r requirements/base.in
@@ -41,7 +41,7 @@ idna==3.4
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.6.0
+importlib-metadata==6.7.0
     # via sphinx
 iniconfig==2.0.0
     # via pytest
@@ -59,7 +59,7 @@ packaging==23.1
     #   sphinx
 pep8==1.7.1
     # via pytest-pep8
-pluggy==1.0.0
+pluggy==1.2.0
     # via pytest
 pycodestyle==2.10.0
     # via flake8
@@ -100,10 +100,8 @@ six==1.16.0
     # via python-coveralls
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.3.0
-    # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
-    #   -r requirements/test.in
+sphinx==7.0.1
+    # via -r requirements/test.in
 sphinxcontrib-applehelp==1.0.4
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
