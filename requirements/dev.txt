@@ -69,7 +69,7 @@ pyflakes==3.0.1
     #   pytest-flakes
 pygments==2.15.1
     # via sphinx
-pytest==7.3.2
+pytest==7.4.0
     # via
     #   -r requirements/test.in
     #   pytest-cache
@@ -120,7 +120,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.6.3
+typing-extensions==4.7.0
     # via asgiref
 urllib3==2.0.3
     # via requests
