@@ -8,14 +8,14 @@ if django.VERSION[:2] >= (2, 1):
 else:  # django < 2.1
     from django.template.base import TOKEN_TEXT
 
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from enmerkar.extract import extract_django
 from markey import underscore
 from markey.tools import TokenStream
 from markey.machine import tokenize, parse_arguments
 
 
-__version__ = '2.1.0'
+__version__ = '2.2.0'
 
 def extract(fileobj, keywords, comment_tags, options):
     """Extracts translation messages from underscore template files.
@@ -77,7 +77,7 @@ def extract(fileobj, keywords, comment_tags, options):
 
                     for arg, argtype in args:
                         if argtype == 'func_string_arg':
-                            strings.append(force_text(arg))
+                            strings.append(force_str(arg))
                         else:
                             strings.append(None)
 
