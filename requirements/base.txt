@@ -10,7 +10,7 @@ babel==2.12.1
     # via
     #   -r requirements/base.in
     #   enmerkar
-django==3.2.20
+django==3.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -19,7 +19,7 @@ enmerkar==0.7.1
     # via -r requirements/base.in
 markey==0.8
     # via -r requirements/base.in
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   babel
     #   django
