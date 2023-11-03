@@ -8,14 +8,14 @@ alabaster==0.7.13
     # via sphinx
 asgiref==3.7.2
     # via django
-babel==2.13.0
+babel==2.13.1
     # via
     #   -r requirements/base.in
     #   enmerkar
     #   sphinx
 certifi==2023.7.22
     # via requests
-charset-normalizer==3.3.0
+charset-normalizer==3.3.2
     # via requests
 coverage[toml]==7.3.2
     # via
@@ -68,7 +68,7 @@ pyflakes==3.1.0
     #   pytest-flakes
 pygments==2.16.1
     # via sphinx
-pytest==7.4.2
+pytest==7.4.3
     # via
     #   -r requirements/test.in
     #   pytest-cache
@@ -121,7 +121,7 @@ tomli==2.0.1
     #   pytest
 typing-extensions==4.8.0
     # via asgiref
-urllib3==2.0.6
+urllib3==2.0.7
     # via requests
 zipp==3.17.0
     # via importlib-metadata
