@@ -17,7 +17,7 @@ certifi==2023.11.17
     # via requests
 charset-normalizer==3.3.2
     # via requests
-coverage[toml]==7.3.4
+coverage[toml]==7.4.0
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -34,17 +34,17 @@ exceptiongroup==1.2.0
     # via pytest
 execnet==2.0.2
     # via pytest-cache
-flake8==6.1.0
+flake8==7.0.0
     # via -r requirements/test.in
 idna==3.6
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==7.0.0
+importlib-metadata==7.0.1
     # via sphinx
 iniconfig==2.0.0
     # via pytest
-jinja2==3.1.2
+jinja2==3.1.3
     # via sphinx
 markey==0.8
     # via -r requirements/base.in
@@ -62,13 +62,13 @@ pluggy==1.3.0
     # via pytest
 pycodestyle==2.11.1
     # via flake8
-pyflakes==3.1.0
+pyflakes==3.2.0
     # via
     #   flake8
     #   pytest-flakes
 pygments==2.17.2
     # via sphinx
-pytest==7.4.3
+pytest==7.4.4
     # via
     #   -r requirements/test.in
     #   pytest-cache
