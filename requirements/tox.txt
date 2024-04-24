@@ -13,8 +13,10 @@ babel==2.14.0
     #   -r requirements/base.in
     #   enmerkar
     #   sphinx
-backports-zoneinfo==0.2.1
-    # via django
+backports-zoneinfo==0.2.1 ; python_version < "3.9"
+    # via
+    #   -c requirements/constraints.txt
+    #   django
 certifi==2024.2.2
     # via requests
 charset-normalizer==3.3.2
