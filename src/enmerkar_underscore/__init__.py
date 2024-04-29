@@ -1,5 +1,4 @@
 import django
-
 from django.template.base import Lexer
 
 if django.VERSION[:2] >= (2, 1):
@@ -10,12 +9,12 @@ else:  # django < 2.1
 
 from django.utils.encoding import force_str
 from enmerkar.extract import extract_django
-from markey import underscore
-from markey.tools import TokenStream
-from markey.machine import tokenize, parse_arguments
 
+from .vendor.markey import underscore
+from .vendor.markey.machine import parse_arguments, tokenize
+from .vendor.markey.tools import TokenStream
 
-__version__ = '2.2.1'
+__version__ = '2.3.0'
 
 def extract(fileobj, keywords, comment_tags, options):
     """Extracts translation messages from underscore template files.
