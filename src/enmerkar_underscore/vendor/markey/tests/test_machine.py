@@ -1,6 +1,6 @@
-from markey.machine import tokenize, parse_arguments
-from markey.tools import TokenStream
-from markey.underscore import rules as underscore_rules
+from enmerkar_underscore.vendor.markey.machine import tokenize, parse_arguments
+from enmerkar_underscore.vendor.markey.tools import TokenStream
+from enmerkar_underscore.vendor.markey.underscore import rules as underscore_rules
 
 
 def test_parse_arguments():

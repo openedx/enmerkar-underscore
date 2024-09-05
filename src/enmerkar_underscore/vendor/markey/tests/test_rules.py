@@ -1,6 +1,6 @@
 import re
 
-from markey.rules import bygroups, rule, ruleset
+from enmerkar_underscore.vendor.markey.rules import bygroups, rule, ruleset
 
 
 def test_bygroups():
