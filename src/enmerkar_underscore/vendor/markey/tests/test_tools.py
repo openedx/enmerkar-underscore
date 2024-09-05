@@ -3,7 +3,7 @@ from six import StringIO
 
 import pytest
 
-from markey.tools import Token, TokenStream, TokenStreamIterator
+from enmerkar_underscore.vendor.markey.tools import Token, TokenStream, TokenStreamIterator
 
 
 def test_tokenstream():
