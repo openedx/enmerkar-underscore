@@ -3,6 +3,8 @@
 History
 -------
 2.0.0 (2020-05-29)
+------------------
+
 * Drop support for Python 3.8
 
 
