@@ -26,7 +26,7 @@ clean-pyc:
 	find . -name '*~' -exec rm -f {} +
 
 lint:
-	flake8 django-babel-underscore tests
+	flake8 src tests
 
 test:
 	py.test tests/
@@ -57,15 +57,11 @@ dist: clean
 	python setup.py bdist_wheel
 	ls -l dist
 
+requirements: ## install development environment requirements
+	uv sync --group dev
+	uv tool install tox --with tox-uv
+
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade:
-	pip install -qr requirements/pip-tools.txt
-	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
-	pip-compile --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
-	pip install -qr requirements/pip.txt
-	pip install -qr requirements/pip-tools.txt
-	pip-compile --upgrade -o requirements/base.txt requirements/base.in
-	pip-compile --upgrade -o requirements/test.txt requirements/test.in
-	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
-	# Let tox control the Django version for tests
-	sed '/^[dD]jango==/d' requirements/test.txt > requirements/tox.txt
+upgrade: ## update python dependencies
+	uv run --with edx-lint edx_lint write_uv_constraints pyproject.toml
+	uv lock --upgrade

@@ -1,37 +1,33 @@
-name: Python CI
+name: CI
 
 on:
   push:
     branches: [master]
   pull_request:
-    branches:
-    - '**'
-
+  workflow_call:
 
 jobs:
   run_tests:
-    name: tests
-    runs-on: ${{ matrix.os }}
+    name: ${{ matrix.toxenv }}
+    runs-on: ubuntu-latest
     strategy:
+      fail-fast: true
       matrix:
-        os: [ubuntu-latest]
-        python-version: ['3.11', '3.12']
-        toxenv: ['django42', 'django52']
+        python-version: ["3.12"]
+        toxenv: [django42, django52]
 
     steps:
-    - uses: actions/checkout@v4
-    - name: setup python
-      uses: actions/setup-python@v5
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
 
-    - name: Install pip
-      run: pip install -r requirements/pip.txt
+      - name: Install uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          enable-cache: true
+          python-version: "${{ matrix.python-version }}"
 
-    - name: Install tox
-      run: pip install tox
+      - name: Install CI dependencies
+        run: uv sync --group ci
 
-    - name: Run Tests
-      env:
-        TOXENV: ${{ matrix.toxenv }}
-      run: tox
+      - name: Run tox
+        run: uv run tox -e ${{ matrix.toxenv }}

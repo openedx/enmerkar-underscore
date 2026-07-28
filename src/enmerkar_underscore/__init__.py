@@ -1,3 +1,10 @@
+from importlib.metadata import version, PackageNotFoundError
+
+try:
+    __version__ = version("enmerkar-underscore")
+except PackageNotFoundError:
+    __version__ = "unknown"
+
 import django
 from django.template.base import Lexer
 
@@ -14,7 +21,6 @@ from .vendor.markey import underscore
 from .vendor.markey.machine import parse_arguments, tokenize
 from .vendor.markey.tools import TokenStream
 
-__version__ = '2.4.0'
 
 def extract(fileobj, keywords, comment_tags, options):
     """Extracts translation messages from underscore template files.

@@ -1,0 +1,126 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm>8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enmerkar-underscore"
+description = "Implements a underscore extractor for django-babel."
+requires-python = ">=3.12"
+license = "BSD-3-Clause"
+license-files = ["LICENSE*"]
+authors = [
+    {name = "Open edX Project", email = "oscm@openedx.org"},
+]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Framework :: Django',
+    'Framework :: Django :: 4.2',
+    'Framework :: Django :: 5.2',
+    'Intended Audience :: Developers',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.12',
+]
+keywords = [
+    "Python",
+    "edx",
+    "enmerkar-underscore",
+]
+
+dynamic = ["readme", "version"]
+
+dependencies = [
+    "django",
+    "babel>=1.3",
+    "enmerkar==0.7.1",
+]
+
+[project.entry-points."babel.extractors"]
+underscore = "enmerkar_underscore:extract"
+
+[project.urls]
+Homepage = "https://github.com/openedx/enmerkar-underscore"
+Repository = "https://github.com/openedx/enmerkar-underscore"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst"], content-type = "text/x-rst"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = [
+    "*.rst",
+]
+
+[tool.semantic_release]
+# SETUPTOOLS_SCM_PRETEND_VERSION lets python-semantic-release drive the version
+# at build time without needing a setup.py file.
+build_command = "pip install build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+
+[tool.semantic_release.commit_parser_options]
+minor_tags = ["feat", "docs"]
+
+[tool.setuptools_scm]
+version_scheme = 'only-version'
+local_scheme = 'no-local-version'
+fallback_version = "0.0.0.dev0"
+
+[dependency-groups]
+test-base = [
+    "coverage",
+    "flake8>=2.0",
+    "pytest",
+    "pytest-cov>=1.4",
+    "pytest-flakes",
+    "pytest-pep8",
+    "python-coveralls",
+    "setuptools",
+    "sphinx",
+]
+test = [
+    {include-group = "test-base"},
+    "Django>=5.2,<6.0",
+]
+django42 = [
+    {include-group = "test-base"},
+    "Django>=4.2,<5.0",
+]
+ci = [
+    "tox",
+    "tox-uv",
+]
+dev = [
+    {include-group = "test"},
+    {include-group = "ci"},
+]
+
+[tool.uv]
+conflicts = [
+    [{group = "test"}, {group = "django42"}],
+]
+#  DO NOT EDIT constraint-dependencies DIRECTLY.
+#  This list is managed by `edx_lint write_uv_constraints`
+#  and will be overwritten the next time `make upgrade` is run.
+#  - GLOBAL constraints: edit edx_lint/files/common_constraints.txt
+#  - REPO-SPECIFIC constraints: edit [tool.edx_lint].uv_constraints in this file
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+    "setuptools<71",
+]
+
+[tool.edx_lint]
+# Repo-specific uv constraints merged with edx-lint's global constraints.
+# Local entries override global ones for the same package.
+# Run `make upgrade` to regenerate [tool.uv].constraint-dependencies.
+uv_constraints = [
+    # Date: 2026-07-28
+    # enmerkar==0.7.1 uses pkg_resources which was removed from setuptools>=71.
+    # Pin until enmerkar is upgraded to use importlib.metadata.
+    # https://github.com/openedx/enmerkar/issues
+    "setuptools<71",
+]
