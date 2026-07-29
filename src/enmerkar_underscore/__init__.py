@@ -1,10 +1,3 @@
-from importlib.metadata import version, PackageNotFoundError
-
-try:
-    __version__ = version("enmerkar-underscore")
-except PackageNotFoundError:
-    __version__ = "unknown"
-
 import django
 from django.template.base import Lexer
 
@@ -20,6 +13,13 @@ from enmerkar.extract import extract_django
 from .vendor.markey import underscore
 from .vendor.markey.machine import parse_arguments, tokenize
 from .vendor.markey.tools import TokenStream
+
+from importlib.metadata import version, PackageNotFoundError
+
+try:
+    __version__ = version("enmerkar-underscore")
+except PackageNotFoundError:
+    __version__ = "unknown"
 
 
 def extract(fileobj, keywords, comment_tags, options):

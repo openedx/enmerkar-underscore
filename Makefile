@@ -29,7 +29,7 @@ lint:
 	flake8 src tests
 
 test:
-	py.test tests/
+	python -Wd -m pytest -p no:pep8 -p no:flakes tests/
 
 test-all:
 	tox
