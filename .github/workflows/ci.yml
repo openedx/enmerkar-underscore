@@ -4,14 +4,12 @@ on:
   push:
     branches: [master]
   pull_request:
-  workflow_call:
 
 jobs:
   run_tests:
     name: ${{ matrix.toxenv }}
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: true
       matrix:
         python-version: ["3.12"]
         toxenv: [django42, django52]
