@@ -29,6 +29,7 @@ lint:
 	flake8 src tests
 
 test:
+	# pytest-pep8 and pytest-flakes are incompatible with pytest 8+ on Python 3.12; disable their auto-loading
 	python -Wd -m pytest -p no:pep8 -p no:flakes tests/
 
 test-all:
