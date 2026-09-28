@@ -113,6 +113,9 @@ constraint-dependencies = [
     "pip<26.2.1",
 ]
 
+[tool.coverage.run]
+source_pkgs = ["enmerkar_underscore"]
+
 [tool.edx_lint]
 uv_constraints = [
 ]
