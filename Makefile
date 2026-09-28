@@ -38,14 +38,14 @@ test-all:
 	tox
 
 coverage:
-	uv run --group test coverage run --source src/enmerkar_underscore -m pytest tests/
-	uv run --group test coverage report -m
-	uv run --group test coverage html
+	coverage run --source src/enmerkar_underscore -m pytest tests/
+	coverage report -m
+	coverage html
 	open htmlcov/index.html
 
 docs:
 	$(MAKE) -e -C docs clean
-	uv run --group doc $(MAKE) -e -C docs html
+	$(MAKE) -e -C docs html
 
 dist: clean
 	uv build
