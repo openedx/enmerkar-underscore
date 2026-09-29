@@ -114,7 +114,7 @@ constraint-dependencies = [
 ]
 
 [tool.coverage.run]
-source_pkgs = ["enmerkar_underscore"]
+source = ["src"]
 
 [tool.edx_lint]
 uv_constraints = [
