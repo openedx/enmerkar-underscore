@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to Django Babel Underscore Extractor's documentation!
-======================================
+=============================================================
 
 Contents:
 

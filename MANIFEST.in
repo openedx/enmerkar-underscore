@@ -1,12 +1,9 @@
-include AUTHORS.rst
-include CONTRIBUTING.rst
-include HISTORY.rst
-include LICENSE
-include README.rst
+# Exclude development, test, and documentation folders
+prune .github
+prune docs
+prune tests
 
-recursive-include tests *
-recursive-exclude * __pycache__
-recursive-exclude * *.py[co]
-
-recursive-include docs *.rst conf.py Makefile make.bat
-include requirements/constraints.txt
+# Exclude root level configuration and build files
+exclude Makefile
+exclude tox.ini
+exclude .gitignore

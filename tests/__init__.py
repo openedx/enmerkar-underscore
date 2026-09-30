@@ -3,6 +3,7 @@ from io import BytesIO
 
 from enmerkar_underscore import extract
 
+
 class TestMixedExtract:
 
     @pytest.fixture(autouse=True)

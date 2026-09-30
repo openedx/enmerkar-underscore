@@ -1,3 +1,5 @@
+from importlib.metadata import version
+
 import django
 from django.template.base import Lexer
 
@@ -14,7 +16,8 @@ from .vendor.markey import underscore
 from .vendor.markey.machine import parse_arguments, tokenize
 from .vendor.markey.tools import TokenStream
 
-__version__ = '2.4.1'
+__version__ = version("enmerkar-underscore")
+
 
 def extract(fileobj, keywords, comment_tags, options):
     """Extracts translation messages from underscore template files.

@@ -1,7 +1,0 @@
-# Core requirements for using this application
-
--r github.in              # Github requirements
--c constraints.txt
-
-django
-babel>=1.3
