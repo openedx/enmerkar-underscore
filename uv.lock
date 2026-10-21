@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.12"
 conflicts = [[
     { package = "enmerkar-underscore", group = "django42" },
@@ -62,11 +62,11 @@ wheels = [
 
 [[package]]
 name = "certifi"
-version = "2026.7.22"
+version = "2026.10.19"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz", hash = "sha256:741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55", size = 138112, upload-time = "2026-07-22T03:35:12.644Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz", hash = "sha256:035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae", size = 137598, upload-time = "2026-10-20T02:24:16.604Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl", hash = "sha256:62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775", size = 136983, upload-time = "2026-07-22T03:35:11.276Z" },
+    { url = "https://files.pythonhosted.org/packages/c4/51/29046e48f693c54e5b7412216d447a1d8362c9653148d98c02cdf65fa733/certifi-2026.10.19-py3-none-any.whl", hash = "sha256:42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b", size = 136464, upload-time = "2026-10-20T02:24:15.072Z" },
 ]
 
 [[package]]
@@ -338,7 +338,7 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "asgiref" },
     { name = "sqlparse" },
-    { name = "tzdata", marker = "(sys_platform == 'win32' and extra == 'group-19-enmerkar-underscore-dev') or (sys_platform == 'win32' and extra != 'group-19-enmerkar-underscore-django42') or (extra == 'group-19-enmerkar-underscore-dev' and extra == 'group-19-enmerkar-underscore-django42') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-doc') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-quality') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-test')" },
+    { name = "tzdata", marker = "(sys_platform == 'win32' and extra != 'group-19-enmerkar-underscore-django42') or (extra == 'group-19-enmerkar-underscore-dev' and extra == 'group-19-enmerkar-underscore-django42') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-doc') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-quality') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-test')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/d5/d8/43e9d000519adceb189620b6869ff88031e046df91c2e9da72f8f6918399/django-5.2.17.tar.gz", hash = "sha256:9d4d93be539a18ab80d058eb515900e10951e04c537c5a6b394fc49528d3251f", size = 10889740, upload-time = "2026-08-04T15:04:03.173Z" }
 wheels = [
@@ -360,7 +360,7 @@ source = { editable = "." }
 dependencies = [
     { name = "babel" },
     { name = "django", version = "4.2.30", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'group-19-enmerkar-underscore-django42'" },
-    { name = "django", version = "5.2.17", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'group-19-enmerkar-underscore-dev' or extra != 'group-19-enmerkar-underscore-django42' or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-doc') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-quality') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-test')" },
+    { name = "django", version = "5.2.17", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'group-19-enmerkar-underscore-dev' or extra != 'group-19-enmerkar-underscore-django42' or extra == 'group-19-enmerkar-underscore-doc' or extra == 'group-19-enmerkar-underscore-quality' or extra == 'group-19-enmerkar-underscore-test'" },
 ]
 
 [package.dev-dependencies]
@@ -684,7 +684,7 @@ name = "pytest"
 version = "9.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32' or (extra == 'group-19-enmerkar-underscore-dev' and extra == 'group-19-enmerkar-underscore-django42') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-doc') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-quality') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-test')" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
     { name = "iniconfig" },
     { name = "packaging" },
     { name = "pluggy" },
@@ -761,7 +761,7 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "alabaster" },
     { name = "babel" },
-    { name = "colorama", marker = "sys_platform == 'win32' or (extra == 'group-19-enmerkar-underscore-dev' and extra == 'group-19-enmerkar-underscore-django42') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-doc') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-quality') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-test')" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
     { name = "docutils" },
     { name = "imagesize" },
     { name = "jinja2" },
@@ -868,7 +868,7 @@ dependencies = [
     { name = "pyproject-api" },
     { name = "python-discovery" },
     { name = "tomli-w" },
-    { name = "typing-extensions", marker = "python_full_version < '3.13' or (extra == 'group-19-enmerkar-underscore-dev' and extra == 'group-19-enmerkar-underscore-django42') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-doc') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-quality') or (extra == 'group-19-enmerkar-underscore-django42' and extra == 'group-19-enmerkar-underscore-test')" },
+    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
     { name = "virtualenv" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c3/8b/2e25d11c05e006438f8a1f20f8814aeb576ec8b3bf157f68454d2dcc09bf/tox-4.61.2.tar.gz", hash = "sha256:463b6eeaaf0929d60b4f7a87b26f4a7a764fe9832a74bf50b4e9d259b6a8e905", size = 306825, upload-time = "2026-08-31T20:19:53.614Z" }
